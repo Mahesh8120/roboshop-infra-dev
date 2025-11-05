@@ -7,7 +7,7 @@ terraform {
   }
   backend "s3" {
     bucket       = "terraform-mahesh"
-    key          = "terraform-sg-rules"
+    key          = "terraform-databases"
     region       = "us-east-1"
     encrypt      = true
     use_lockfile = true
