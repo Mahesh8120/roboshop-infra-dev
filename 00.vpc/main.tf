@@ -1,4 +1,4 @@
-module "aws_vpc" {
+module "vpc" {
   source = "git::https://github.com/Mahesh8120/terraform-vpc-module.git?ref=main"
   
    vpc_cidr = var.vpc_cidr
@@ -14,6 +14,7 @@ module "aws_vpc" {
 
     # database subnets
     database_subnet_cidrs = var.database_subnet_cidrs
+
 }
 
 

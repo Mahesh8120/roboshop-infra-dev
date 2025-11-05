@@ -1,26 +1,20 @@
 variable "vpc_cidr" {
-  default = "10.0.0.0/16"
-}
-
-variable "vpc_tags" {
-  default = {
-    Name       = "roboshop"
-    Purpose    = "vpc-module-test"
-    DontDelete = "true"
-  }
+    default = "10.0.0.0/16"
 }
 
 variable "project_name" {
-  default = "roboshop"
+    default = "roboshop"
 }
 
-variable "environment" {
-  default = "dev"
+variable "environment"{
+    default = "dev"
 }
-variable "igw_tags" {
-  default = {
-    Name = "roboshop-igw"
-  }
+
+variable "vpc_tags" {
+    default = {
+        Purpose = "Roboshop VPC"
+        DontDelete = "true"
+    }
 }
 
 variable "public_subnet_cidrs" {
