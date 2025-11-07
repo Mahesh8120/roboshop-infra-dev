@@ -24,9 +24,9 @@ variable "sg_names" {
 }
 
 variable "zone_id" {
-    default = "Z0948150OFPSYTNVYZOY"
+    default = "Z09532653LYSJAOMBYJTE"
 }
 
 variable "domain_name" {
-    default = "daws86s.fun"
+    default = "sitaram.icu"
 }
