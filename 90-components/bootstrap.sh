@@ -1,41 +1,41 @@
-# #!/bin/bash
+#!/bin/bash
 
-# component=$1
-# environment=$2
-# dnf install ansible -y
+component=$1
+environment=$2
+dnf install ansible -y
 
-# REPO_URL=https://github.com/Mahesh8120/Ansible_Roboshop-roles-tf.git
-# REPO_DIR=/opt/roboshop/ansible
-# ANSIBLE_DIR=ansible-roboshop-roles-tf
+REPO_URL=https://github.com/Mahesh8120/Ansible_Roboshop-roles-tf.git
+REPO_DIR=/opt/roboshop/ansible
+ANSIBLE_DIR=ansible-roboshop-roles-tf
 
-# mkdir -p $REPO_DIR
-# mkdir -p /var/log/roboshop/
-# touch ansible.log
+mkdir -p $REPO_DIR
+mkdir -p /var/log/roboshop/
+touch ansible.log
 
 # cd $REPO_DIR
 
-# # check if ansible repo is already cloned or not
+# check if ansible repo is already cloned or not
 
-# if [ -d $ANSIBLE_DIR ]; then
+if [ -d $ANSIBLE_DIR ]; then
 
-#     cd $ANSIBLE_DIR
-#     git pull
-# else
-#     git clone $REPO_URL
-#     cd $ANSIBLE_DIR
-# fi
-# echo "environment is: $2"
-# ansible-playbook -e component=$component -e env=$environment main.yaml
+    cd $ANSIBLE_DIR
+    git pull
+else
+    git clone $REPO_URL
+    cd $ANSIBLE_DIR
+fi
+echo "environment is: $2"
+ansible-playbook -e component=$component -e env=$environment main.yaml
 
-#!/bin/bash
-set -e
+# #!/bin/bash
+# set -e
 
-component="$1"
-environment="$2"
+# component="$1"
+# environment="$2"
 
-dnf install ansible -y
+# dnf install ansible -y
 
-echo "Running ansible-pull for $component in $environment"
+# echo "Running ansible-pull for $component in $environment"
 
-ansible-pull -U https://github.com/Mahesh8120/Ansible_Roboshop-roles-tf.git \
-  -e component="$component" -e env="$environment" main.yaml
+# ansible-pull -U https://github.com/Mahesh8120/Ansible_Roboshop-roles-tf.git \
+#   -e component="$component" -e env="$environment" main.yaml
